@@ -1,0 +1,14 @@
+package testprogram;
+
+public class testprogram {
+	public static void main(String[] args) {
+		
+		boolean isGay = false;
+		
+		if (!isGay == false) {
+			isGay = false;
+		}
+
+		System.out.println(isGay);
+	}
+}

@@ -1,0 +1,29 @@
+package testprogram;
+import java.time.YearMonth;
+import java.time.MonthDay;
+import java.time.LocalDate;
+
+public class testprogram {
+	public static void main(String[] args) {
+		
+
+		
+		//Creates an array of all days in the year of the type LocalDate, from Jan 2018 to Dec 2018.
+		
+		String s3bucketname = "s3a://deutsche-boerse-xetra-pds/";	
+		LocalDate start = LocalDate.parse("2018-01-01");
+		LocalDate end = LocalDate.parse("2018-12-31");
+		LocalDate next = start.minusDays(1);
+		
+		while ((next = next.plusDays(1)).isBefore(end.plusDays(1))) {
+				for (int j = 0; j < 24; j++) {
+				
+				String s3filename = s3bucketname + next + "/" + next + 
+						"_BINS_XETRA" + String.format("%02d", j) + ".csv";
+				System.out.println(s3filename);
+			}
+		}
+
+	}
+	
+}

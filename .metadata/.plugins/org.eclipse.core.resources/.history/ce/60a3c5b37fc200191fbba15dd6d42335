@@ -1,0 +1,12 @@
+package com.gnguyen.Util;
+import org.apache.spark.SparkConf;
+import org.apache.spark.api.java.JavaSparkContext;
+import org.apache.spark.sql.SparkSession;
+
+public class StockWinner {
+	//so what we want to do here is. get the list of all the csv files. 
+	//all relevant ones since 2018 of january. Then we loop through them logically by day, and see
+	//which row had the most stock winnings per that day. 
+	
+	
+}

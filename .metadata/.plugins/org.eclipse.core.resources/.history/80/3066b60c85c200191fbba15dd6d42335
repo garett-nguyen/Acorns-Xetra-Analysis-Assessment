@@ -1,0 +1,19 @@
+package testprogram;
+import java.time.YearMonth;
+import java.time.MonthDay;
+import java.time.LocalDate;
+
+public class testprogram {
+	public static void main(String[] args) {
+		
+		// Monday, February 29 is a leap day in 2016 (otherwise, February only has 28 days)
+		LocalDate start = LocalDate.parse("2016-02-28"),
+		          end   = LocalDate.parse("2016-03-02");
+
+		// 4 days between (end is inclusive in this example)
+		LocalDate next = start.minusDays(1);
+		while ((next = next.plusDays(1)).isBefore(end.plusDays(1))) {
+		    System.out.println(next);
+		}
+	}
+}

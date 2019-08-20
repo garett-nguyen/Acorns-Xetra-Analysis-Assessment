@@ -1,0 +1,17 @@
+package testprogram;
+import java.time.YearMonth;
+import java.time.MonthDay;
+import java.time.LocalDate;
+
+public class testprogram {
+	public static void main(String[] args) {
+		
+		LocalDate start = LocalDate.parse("2018-01-01"), end   = LocalDate.parse("2018-12-31");
+
+		// 4 days between (end is inclusive in this example)
+		LocalDate next = start.minusDays(1);
+		while ((next = next.plusDays(1)).isBefore(end.plusDays(1))) {
+		    System.out.println(next);
+		}
+	}
+}

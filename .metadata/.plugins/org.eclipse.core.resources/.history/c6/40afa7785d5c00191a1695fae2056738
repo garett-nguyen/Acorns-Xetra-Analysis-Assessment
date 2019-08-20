@@ -1,0 +1,15 @@
+package testprogram;
+
+public class testprogram {
+	public static void main(String[] args) {
+		
+		StringBuilder s = new StringBuilder("se");
+		
+		StringBuilder b = s.append("d");
+		
+		System.out.println(s);
+		System.out.println(b);;
+		
+		Fruit fruit = new Apple();
+	}
+}

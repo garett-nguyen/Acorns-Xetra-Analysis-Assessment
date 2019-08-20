@@ -1,0 +1,8 @@
+package testprogram;
+
+public class Apple extends Fruit {
+	public void grow() {
+		
+	}
+	
+}

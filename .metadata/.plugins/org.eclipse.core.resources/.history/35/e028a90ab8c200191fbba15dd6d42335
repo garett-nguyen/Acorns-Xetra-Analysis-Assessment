@@ -1,0 +1,26 @@
+package testprogram;
+import java.time.YearMonth;
+import java.time.MonthDay;
+import java.time.LocalDate;
+
+public class testprogram {
+	public static void main(String[] args) {
+		
+		
+		String s3bucketname = "s3a:///deutsche-boerse-xetra-pds/";
+		
+		LocalDate[] daysOfYear = new LocalDate[365];
+		LocalDate start = LocalDate.parse("2018-01-01"), end   = LocalDate.parse("2018-12-31");
+		LocalDate next = start.minusDays(1);
+		int day = 0;
+		while ((next = next.plusDays(1)).isBefore(end.plusDays(1))) {
+			daysOfYear[day++] = next;
+		}
+		
+		
+		for (int i = 0; i < day; i++) {
+			System.out.println(daysOfYear[i]);
+		}
+	}
+	
+}
